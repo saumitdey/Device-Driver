@@ -1,0 +1,33 @@
+WRITE THE MODULE/DRIVER
+    1. write myModule.c
+    2. make
+    3. insmod myModule.ko
+	opt- dmesg
+    4. mknod /dev/myModule c 251 0
+    5. run userApp to talk to the module/driver
+
+Demonstration
+--------------driver setup-----------------
+    - compile myModule.c
+        make
+    - insert the module:
+        sudo insmod myModule.ko
+    - create the device file
+        sudo mknod /dev/myDevice c 251 0
+    - change device file permission
+        sudo chmod 777 /dev/myDevice
+
+        
+--------------live display-----------------
+    - bring up the display terminal
+        watch -n 0.1 "dmesg|tail -n 15"
+
+
+
+--------------userapp-----------------
+    - compile userapp.c
+        gcc userapp.c -o userapp
+    - run the userapp
+        ./userapp
+
+

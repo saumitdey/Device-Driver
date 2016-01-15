@@ -1,0 +1,1 @@
+cmd_/home/dyao/finalbkp/myModule.ko := ld -r -m elf_x86_64 -T /usr/src/linux-headers-3.13.0-39-generic/scripts/module-common.lds --build-id  -o /home/dyao/finalbkp/myModule.ko /home/dyao/finalbkp/myModule.o /home/dyao/finalbkp/myModule.mod.o
